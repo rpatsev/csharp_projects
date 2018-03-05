@@ -1,0 +1,6 @@
+c:\users\student\documents\visual studio 2015\Projects\CurrencyExchange\CurrencyExchange\bin\Debug\CurrencyExchange.exe.config
+c:\users\student\documents\visual studio 2015\Projects\CurrencyExchange\CurrencyExchange\bin\Debug\CurrencyExchange.exe
+c:\users\student\documents\visual studio 2015\Projects\CurrencyExchange\CurrencyExchange\bin\Debug\CurrencyExchange.pdb
+c:\users\student\documents\visual studio 2015\Projects\CurrencyExchange\CurrencyExchange\obj\Debug\CurrencyExchange.csprojResolveAssemblyReference.cache
+c:\users\student\documents\visual studio 2015\Projects\CurrencyExchange\CurrencyExchange\obj\Debug\CurrencyExchange.exe
+c:\users\student\documents\visual studio 2015\Projects\CurrencyExchange\CurrencyExchange\obj\Debug\CurrencyExchange.pdb
