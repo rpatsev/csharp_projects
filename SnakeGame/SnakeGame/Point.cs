@@ -52,6 +52,12 @@ namespace SnakeGame
             }
         }
 
+        public void Clear()
+        {
+            mark =  ' ';
+            Render();
+        }
+
         public void Render()
         {
             Console.SetCursorPosition(x, y);

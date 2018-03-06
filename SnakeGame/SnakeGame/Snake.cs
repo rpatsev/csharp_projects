@@ -8,7 +8,7 @@ namespace SnakeGame
 {
     public class Snake : Line
     {
-        
+        Direction direction;
 
         public Snake(int Length, Direction direction, Point tail)
         {
@@ -24,7 +24,21 @@ namespace SnakeGame
         internal void Move()
         {
             Point tail = pList.First();
-            //pList
+            pList.Remove(tail);
+            Point head = MoveNext();
+            pList.Add(head);
+
+            tail.Clear();
+            head.Render();
+        }
+
+
+        private Point MoveNext()
+        {
+            Point head = pList.Last();
+            Point nextPoint = new SnakeGame.Point(head);
+            nextPoint.Move(1, direction);
+            return nextPoint;
         }
     }
 }
