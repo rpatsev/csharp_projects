@@ -52,6 +52,11 @@ namespace SnakeGame
             }
         }
 
+        public bool IsHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
+
         public void Clear()
         {
             mark =  ' ';
@@ -61,7 +66,7 @@ namespace SnakeGame
         public void Render()
         {
             Console.SetCursorPosition(x, y);
-            Console.Write(mark);
+            Console.Write(mark);            
         }
     }
 }

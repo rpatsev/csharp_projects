@@ -8,7 +8,7 @@ namespace SnakeGame
 {
     public class Snake : Line
     {
-        Direction direction;
+        public Direction direction;
 
         public Snake(int Length, Direction direction, Point tail)
         {
@@ -16,8 +16,9 @@ namespace SnakeGame
             for (int i = 0; i < Length; i++)
             {
                 Point p = new Point(tail);
-                p.Move(i, direction);
                 pList.Add(p);
+                p.Move(i, direction);
+                
             }
         }
 
@@ -25,13 +26,27 @@ namespace SnakeGame
         {
             Point tail = pList.First();
             pList.Remove(tail);
-            Point head = MoveNext();
-            pList.Add(head);
-
             tail.Clear();
+
+            Point head = MoveNext();
+            pList.Add(head);          
             head.Render();
         }
 
+        internal bool Eat(Point food)
+        {
+            Point head = MoveNext();
+            if (head.IsHit(food))
+            {
+                food.mark = head.mark;
+                pList.Add(food);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         private Point MoveNext()
         {
@@ -39,6 +54,19 @@ namespace SnakeGame
             Point nextPoint = new SnakeGame.Point(head);
             nextPoint.Move(1, direction);
             return nextPoint;
+        }
+
+        public void HandleKeyPress(ConsoleKey key)
+        {
+                if (key == ConsoleKey.LeftArrow)
+                    direction = Direction.LEFT;
+                else if (key == ConsoleKey.RightArrow)
+                    direction = Direction.RIGHT;
+                else if (key == ConsoleKey.UpArrow)
+                    direction = Direction.UP;
+                else if (key == ConsoleKey.DownArrow)
+                    direction = Direction.DOWN;
+         
         }
     }
 }
