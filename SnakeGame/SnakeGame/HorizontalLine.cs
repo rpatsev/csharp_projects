@@ -11,7 +11,7 @@ namespace SnakeGame
 
         public HorizontalLine(int xLeft, int xRight, int y, char mark)
         {
-            pList = new List<Point>();
+            pList = new List<Point>(); //TODO: Here and in other classes: don't use shortenings and data type in names. 'points' instead of 'pList'.
             for (int x = xLeft; x <= xRight; x++)
             {
                 Point p = new Point(x, y, mark);

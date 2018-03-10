@@ -10,6 +10,7 @@ namespace SnakeGame
     {
         public VerticalLine(int yUp, int yDown, int x, char mark)
         {
+            //TODO: The constructor code looks pretty the same as for Horizontal line. Should be merged.
             pList = new List<Point>();
             for (int y = yUp; y <= yDown; y++)
             {
