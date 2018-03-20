@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LinkedListProject
+﻿namespace LinkedListProject
 {
     public class LinkedListItem
     {
@@ -12,5 +6,10 @@ namespace LinkedListProject
         public LinkedListItem Previous;
 
         public object Data;
+
+        public LinkedListItem(object Data)
+        {
+            this.Data = Data;
+        }
     }
 }
