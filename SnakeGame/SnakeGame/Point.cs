@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SnakeGame
 {
+    //TODO: Consider using struct instead of class
     public class Point
     {
 
@@ -13,6 +14,7 @@ namespace SnakeGame
         public int y;
         public char mark;
 
+        //TODO: Don't leave unused code. The constructor below has 0 references.
         public Point()
         {
             
@@ -52,6 +54,7 @@ namespace SnakeGame
             }
         }
 
+        //TODO: From the code below, it's rather 'Equals' than 'IsHit'. Override 'Equals' method of 'object' class.
         public bool IsHit(Point p)
         {
             return p.x == this.x && p.y == this.y;
@@ -59,6 +62,7 @@ namespace SnakeGame
 
         public void Clear()
         {
+            //TODO: Using this implementation of 'Clear', how would you 'Render' a point after 'Clear' it?
             mark =  ' ';
             Render();
         }

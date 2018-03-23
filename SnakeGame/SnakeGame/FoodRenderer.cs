@@ -12,7 +12,8 @@ namespace SnakeGame
         int fieldWidth;
         char foodMark;
 
-        char[] foodMenu = { '&' , '*' , '/', '#'};
+        char[] foodMenu = { '&' , '*' , '/', '#'}; //TODO: Looks good, but the requirement was to implement different food 
+                                                   //using polimorphism principle implementation in C#.
         Random rand = new Random();
 
         public FoodRenderer(int height, int width)
